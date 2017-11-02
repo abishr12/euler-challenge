@@ -1,3 +1,9 @@
+# QUESTION: The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
+
+
+
+
 import time
 start_time = time.time()
 
@@ -43,7 +49,6 @@ def divisible_by_three(n):
 # Runs the number through factorization but only stores the numbers that are prime into the array
 prime_factors = []
 def highest_prime(number):
-    #print(number)
     for test in range(2, number+1):
         if(number % test == 0 and is_prime(test) != False ):
             if(test not in prime_factors):
@@ -61,11 +66,3 @@ highest_prime(600851475143)
 # Produces the highest factor in the array
 print (max(prime_factors))
 print("--- %s seconds ---" % (time.time() - start_time))
-
-
-# def use_factorization(number):
-#     print(number)
-#     for test in range(2, number):
-#         if(number % test == 0):
-#             numFactors.append(test)
-#             return use_factorization(int(number/test))
